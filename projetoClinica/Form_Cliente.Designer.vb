@@ -23,24 +23,24 @@ Partial Class Form_Cliente
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtCodigo = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtNome = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtRg = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.txtIdade = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.btnNovo = New System.Windows.Forms.Button()
-        Me.btnSalvar = New System.Windows.Forms.Button()
-        Me.btnLimpar = New System.Windows.Forms.Button()
+        Me.txtCelular = New System.Windows.Forms.MaskedTextBox()
+        Me.txtNascimento = New System.Windows.Forms.MaskedTextBox()
+        Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnExcluir = New System.Windows.Forms.Button()
         Me.btnConsultar = New System.Windows.Forms.Button()
-        Me.txtNascimento = New System.Windows.Forms.MaskedTextBox()
-        Me.txtCelular = New System.Windows.Forms.MaskedTextBox()
-        Me.btnCancelar = New System.Windows.Forms.Button()
+        Me.btnSalvar = New System.Windows.Forms.Button()
+        Me.btnLimpar = New System.Windows.Forms.Button()
+        Me.btnNovo = New System.Windows.Forms.Button()
+        Me.txtNome = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.txtIdade = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtRg = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtCodigo = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -71,124 +71,33 @@ Partial Class Form_Cliente
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Dados do Cliente"
         '
-        'Label1
+        'txtCelular
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(19, 31)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(43, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Código:"
+        Me.txtCelular.Enabled = False
+        Me.txtCelular.Location = New System.Drawing.Point(327, 106)
+        Me.txtCelular.Mask = "(99)99999-9999"
+        Me.txtCelular.Name = "txtCelular"
+        Me.txtCelular.Size = New System.Drawing.Size(151, 20)
+        Me.txtCelular.TabIndex = 5
         '
-        'txtCodigo
+        'txtNascimento
         '
-        Me.txtCodigo.BackColor = System.Drawing.SystemColors.Control
-        Me.txtCodigo.Enabled = False
-        Me.txtCodigo.Location = New System.Drawing.Point(22, 47)
-        Me.txtCodigo.Name = "txtCodigo"
-        Me.txtCodigo.ReadOnly = True
-        Me.txtCodigo.Size = New System.Drawing.Size(59, 20)
-        Me.txtCodigo.TabIndex = 1
+        Me.txtNascimento.Enabled = False
+        Me.txtNascimento.Location = New System.Drawing.Point(139, 106)
+        Me.txtNascimento.Mask = "99/99/9999"
+        Me.txtNascimento.Name = "txtNascimento"
+        Me.txtNascimento.Size = New System.Drawing.Size(100, 20)
+        Me.txtNascimento.TabIndex = 4
         '
-        'Label2
+        'btnCancelar
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(125, 31)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(38, 13)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Nome:"
-        '
-        'txtNome
-        '
-        Me.txtNome.Enabled = False
-        Me.txtNome.Location = New System.Drawing.Point(128, 47)
-        Me.txtNome.Name = "txtNome"
-        Me.txtNome.Size = New System.Drawing.Size(350, 20)
-        Me.txtNome.TabIndex = 1
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(19, 90)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(26, 13)
-        Me.Label3.TabIndex = 0
-        Me.Label3.Text = "RG:"
-        '
-        'txtRg
-        '
-        Me.txtRg.Enabled = False
-        Me.txtRg.Location = New System.Drawing.Point(22, 106)
-        Me.txtRg.Name = "txtRg"
-        Me.txtRg.Size = New System.Drawing.Size(100, 20)
-        Me.txtRg.TabIndex = 1
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(136, 90)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(92, 13)
-        Me.Label4.TabIndex = 0
-        Me.Label4.Text = "Data Nascimento:"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(255, 90)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(37, 13)
-        Me.Label5.TabIndex = 0
-        Me.Label5.Text = "Idade:"
-        '
-        'txtIdade
-        '
-        Me.txtIdade.BackColor = System.Drawing.SystemColors.Control
-        Me.txtIdade.Enabled = False
-        Me.txtIdade.Location = New System.Drawing.Point(258, 106)
-        Me.txtIdade.Name = "txtIdade"
-        Me.txtIdade.ReadOnly = True
-        Me.txtIdade.Size = New System.Drawing.Size(51, 20)
-        Me.txtIdade.TabIndex = 1
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(324, 90)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(42, 13)
-        Me.Label6.TabIndex = 0
-        Me.Label6.Text = "Celular:"
-        '
-        'btnNovo
-        '
-        Me.btnNovo.Location = New System.Drawing.Point(22, 154)
-        Me.btnNovo.Name = "btnNovo"
-        Me.btnNovo.Size = New System.Drawing.Size(75, 23)
-        Me.btnNovo.TabIndex = 2
-        Me.btnNovo.Text = "Novo"
-        Me.btnNovo.UseVisualStyleBackColor = True
-        '
-        'btnSalvar
-        '
-        Me.btnSalvar.Enabled = False
-        Me.btnSalvar.Location = New System.Drawing.Point(103, 154)
-        Me.btnSalvar.Name = "btnSalvar"
-        Me.btnSalvar.Size = New System.Drawing.Size(75, 23)
-        Me.btnSalvar.TabIndex = 2
-        Me.btnSalvar.Text = "Salvar"
-        Me.btnSalvar.UseVisualStyleBackColor = True
-        '
-        'btnLimpar
-        '
-        Me.btnLimpar.Enabled = False
-        Me.btnLimpar.Location = New System.Drawing.Point(184, 154)
-        Me.btnLimpar.Name = "btnLimpar"
-        Me.btnLimpar.Size = New System.Drawing.Size(75, 23)
-        Me.btnLimpar.TabIndex = 2
-        Me.btnLimpar.Text = "Limpar"
-        Me.btnLimpar.UseVisualStyleBackColor = True
+        Me.btnCancelar.Enabled = False
+        Me.btnCancelar.Location = New System.Drawing.Point(346, 154)
+        Me.btnCancelar.Name = "btnCancelar"
+        Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
+        Me.btnCancelar.TabIndex = 9
+        Me.btnCancelar.Text = "Cancelar"
+        Me.btnCancelar.UseVisualStyleBackColor = True
         '
         'btnExcluir
         '
@@ -196,7 +105,7 @@ Partial Class Form_Cliente
         Me.btnExcluir.Location = New System.Drawing.Point(265, 154)
         Me.btnExcluir.Name = "btnExcluir"
         Me.btnExcluir.Size = New System.Drawing.Size(75, 23)
-        Me.btnExcluir.TabIndex = 2
+        Me.btnExcluir.TabIndex = 8
         Me.btnExcluir.Text = "Excluir"
         Me.btnExcluir.UseVisualStyleBackColor = True
         '
@@ -209,33 +118,124 @@ Partial Class Form_Cliente
         Me.btnConsultar.Text = "..."
         Me.btnConsultar.UseVisualStyleBackColor = True
         '
-        'txtNascimento
+        'btnSalvar
         '
-        Me.txtNascimento.Enabled = False
-        Me.txtNascimento.Location = New System.Drawing.Point(139, 106)
-        Me.txtNascimento.Mask = "99/99/9999"
-        Me.txtNascimento.Name = "txtNascimento"
-        Me.txtNascimento.Size = New System.Drawing.Size(100, 20)
-        Me.txtNascimento.TabIndex = 3
+        Me.btnSalvar.Enabled = False
+        Me.btnSalvar.Location = New System.Drawing.Point(103, 154)
+        Me.btnSalvar.Name = "btnSalvar"
+        Me.btnSalvar.Size = New System.Drawing.Size(75, 23)
+        Me.btnSalvar.TabIndex = 6
+        Me.btnSalvar.Text = "Salvar"
+        Me.btnSalvar.UseVisualStyleBackColor = True
         '
-        'txtCelular
+        'btnLimpar
         '
-        Me.txtCelular.Enabled = False
-        Me.txtCelular.Location = New System.Drawing.Point(327, 106)
-        Me.txtCelular.Mask = "(99)99999-9999"
-        Me.txtCelular.Name = "txtCelular"
-        Me.txtCelular.Size = New System.Drawing.Size(151, 20)
-        Me.txtCelular.TabIndex = 4
+        Me.btnLimpar.Enabled = False
+        Me.btnLimpar.Location = New System.Drawing.Point(184, 154)
+        Me.btnLimpar.Name = "btnLimpar"
+        Me.btnLimpar.Size = New System.Drawing.Size(75, 23)
+        Me.btnLimpar.TabIndex = 7
+        Me.btnLimpar.Text = "Limpar"
+        Me.btnLimpar.UseVisualStyleBackColor = True
         '
-        'btnCancelar
+        'btnNovo
         '
-        Me.btnCancelar.Enabled = False
-        Me.btnCancelar.Location = New System.Drawing.Point(346, 154)
-        Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
-        Me.btnCancelar.TabIndex = 2
-        Me.btnCancelar.Text = "Cancelar"
-        Me.btnCancelar.UseVisualStyleBackColor = True
+        Me.btnNovo.Location = New System.Drawing.Point(22, 154)
+        Me.btnNovo.Name = "btnNovo"
+        Me.btnNovo.Size = New System.Drawing.Size(75, 23)
+        Me.btnNovo.TabIndex = 1
+        Me.btnNovo.Text = "Novo"
+        Me.btnNovo.UseVisualStyleBackColor = True
+        '
+        'txtNome
+        '
+        Me.txtNome.Enabled = False
+        Me.txtNome.Location = New System.Drawing.Point(128, 47)
+        Me.txtNome.Name = "txtNome"
+        Me.txtNome.Size = New System.Drawing.Size(350, 20)
+        Me.txtNome.TabIndex = 2
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(125, 31)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(38, 13)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "Nome:"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(324, 90)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(42, 13)
+        Me.Label6.TabIndex = 0
+        Me.Label6.Text = "Celular:"
+        '
+        'txtIdade
+        '
+        Me.txtIdade.BackColor = System.Drawing.SystemColors.Control
+        Me.txtIdade.Enabled = False
+        Me.txtIdade.Location = New System.Drawing.Point(258, 106)
+        Me.txtIdade.Name = "txtIdade"
+        Me.txtIdade.ReadOnly = True
+        Me.txtIdade.Size = New System.Drawing.Size(51, 20)
+        Me.txtIdade.TabIndex = 11
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(255, 90)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(37, 13)
+        Me.Label5.TabIndex = 0
+        Me.Label5.Text = "Idade:"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(136, 90)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(92, 13)
+        Me.Label4.TabIndex = 0
+        Me.Label4.Text = "Data Nascimento:"
+        '
+        'txtRg
+        '
+        Me.txtRg.Enabled = False
+        Me.txtRg.Location = New System.Drawing.Point(22, 106)
+        Me.txtRg.Name = "txtRg"
+        Me.txtRg.Size = New System.Drawing.Size(100, 20)
+        Me.txtRg.TabIndex = 3
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(19, 90)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(26, 13)
+        Me.Label3.TabIndex = 0
+        Me.Label3.Text = "RG:"
+        '
+        'txtCodigo
+        '
+        Me.txtCodigo.BackColor = System.Drawing.SystemColors.Control
+        Me.txtCodigo.Enabled = False
+        Me.txtCodigo.Location = New System.Drawing.Point(22, 47)
+        Me.txtCodigo.Name = "txtCodigo"
+        Me.txtCodigo.ReadOnly = True
+        Me.txtCodigo.Size = New System.Drawing.Size(59, 20)
+        Me.txtCodigo.TabIndex = 10
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(19, 31)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(43, 13)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Código:"
         '
         'Form_Cliente
         '
