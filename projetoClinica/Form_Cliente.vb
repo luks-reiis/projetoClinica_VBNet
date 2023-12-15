@@ -1,5 +1,14 @@
 ﻿Public Class Form_Cliente
 
+    Dim sql As String
+    Dim ds As New DataSet
+    Dim con As New Conexao_sql
+
+    Dim cliente As New Cliente
+
+    'Armazena cadastro=1 ou alteração=2
+    Dim salvar As Integer = 0
+
     Public Sub Habilitar()
 
         txtNome.Enabled = True
@@ -16,9 +25,25 @@
     End Sub
 
     Private Sub btnNovo_Click(sender As Object, e As EventArgs) Handles btnNovo.Click
+        salvar = 1
 
         Habilitar()
         txtNome.Focus()
+
+
+
+        Try
+
+            ds = cliente.consultaMaxCodigo()
+
+            txtCodigo.Text = ds.Tables(0).Rows(0).Item(0) + 1
+
+
+
+        Catch ex As Exception
+            txtCodigo.Text = "0"
+        End Try
+
 
     End Sub
 
@@ -63,6 +88,28 @@
     End Sub
 
     Private Sub btnSalvar_Click(sender As Object, e As EventArgs) Handles btnSalvar.Click
+
+        'Salvar novo
+        If salvar = 1 Then
+            Dim dt As Date = DateAndTime.Now
+
+
+
+            cliente.nomeCliente = txtNome.Text
+            cliente.rgCliente = txtRg.Text
+            cliente.nascCliente = txtNascimento.Text
+            cliente.telefoneCliente = txtCelular.Text
+            cliente.idadeCliente = txtIdade.Text
+            cliente.usuario = Form_Principal.lblUsuario.Text
+            cliente.dataCadastro = dt
+
+            cliente.cadastrarCliente()
+            MsgBox("Cliente cadastrado com sucesso!", MsgBoxStyle.Information, "Cadastro de clientes")
+
+            'Alterar existente
+        ElseIf salvar = 2 Then
+
+        End If
 
 
 

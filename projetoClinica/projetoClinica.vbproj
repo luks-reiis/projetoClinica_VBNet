@@ -72,6 +72,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cliente.vb" />
     <Compile Include="Conexao_sql.vb" />
     <Compile Include="Form_Cliente.Designer.vb">
       <DependentUpon>Form_Cliente.vb</DependentUpon>

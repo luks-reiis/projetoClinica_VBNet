@@ -227,6 +227,7 @@ Partial Class Form_Cliente
         Me.txtCodigo.ReadOnly = True
         Me.txtCodigo.Size = New System.Drawing.Size(59, 20)
         Me.txtCodigo.TabIndex = 10
+        Me.txtCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label1
         '
