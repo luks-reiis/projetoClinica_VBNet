@@ -88,6 +88,38 @@
     End Sub
 
     Private Sub btnSalvar_Click(sender As Object, e As EventArgs) Handles btnSalvar.Click
+        If txtNome.Text.Length < 1 Then
+
+            MsgBox("Por favor, preencha o campo nome!")
+            txtNome.Focus()
+            Exit Sub
+
+        End If
+
+        If txtRg.Text.Length < 1 Then
+
+            MsgBox("Por favor, preencha o campo RG!")
+            txtRg.Focus()
+            Exit Sub
+
+        End If
+
+        If txtNascimento.Text.Length < 1 Then
+
+            MsgBox("Por favor, preencha o campo data de nascimento!")
+            txtNascimento.Focus()
+            Exit Sub
+
+        End If
+
+        If txtCelular.Text.Length < 1 Then
+
+            MsgBox("Por favor, preencha o campo celular!")
+            txtCelular.Focus()
+            Exit Sub
+
+        End If
+
 
         'Salvar novo
         If salvar = 1 Then
@@ -105,6 +137,11 @@
 
             cliente.cadastrarCliente()
             MsgBox("Cliente cadastrado com sucesso!", MsgBoxStyle.Information, "Cadastro de clientes")
+
+            Limpar()
+            Desabilitar()
+
+            salvar = 0
 
             'Alterar existente
         ElseIf salvar = 2 Then
