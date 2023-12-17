@@ -100,4 +100,15 @@
 
     End Function
 
+
+    Public Function consultaClientes()
+
+        sql = "SELECT * FROM clientes ORDER BY nome_cliente ASC"
+        ds = con.Listar(sql)
+        Return ds
+
+    End Function
+
+
+
 End Class

@@ -204,4 +204,11 @@
             txtCelular.Focus()
         End If
     End Sub
+
+    Private Sub btnConsultar_Click(sender As Object, e As EventArgs) Handles btnConsultar.Click
+
+        Form_Consulta_Cliente.Show()
+
+
+    End Sub
 End Class
