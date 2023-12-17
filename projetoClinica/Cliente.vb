@@ -92,6 +92,7 @@
 
     End Sub
 
+    'Consulta do último código cadastrado de clientes
     Public Function consultaMaxCodigo()
 
         sql = "SELECT MAX(id_cliente) FROM clientes"
@@ -100,7 +101,7 @@
 
     End Function
 
-
+    'Consulta por ordem alfabética
     Public Function consultaClientes()
 
         sql = "SELECT * FROM clientes ORDER BY nome_cliente ASC"
@@ -109,6 +110,14 @@
 
     End Function
 
+    'Consulta por nome de clientes
+    Public Function consultasClientesNome()
+
+        sql = "SELECT * FROM clientes WHERE nome_cliente like '%" & nomeCliente & "%'"
+        ds = con.Listar(sql)
+        Return ds
+
+    End Function
 
 
 End Class

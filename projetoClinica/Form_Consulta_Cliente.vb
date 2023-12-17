@@ -110,4 +110,19 @@
 
         Me.Close()
     End Sub
+
+    Private Sub txtNome_TextChanged(sender As Object, e As EventArgs) Handles txtNome.TextChanged
+
+        Try
+
+            cliente.nomeCliente = txtNome.Text
+            ds = cliente.consultasClientesNome()
+            dgvClientes.DataSource = ds.Tables(0)
+
+        Catch ex As Exception
+            MsgBox("Não foi possível consultar o cliente! Detalhes do erro: " & ex.Message, MsgBoxStyle.Critical, "Erro")
+            Exit Sub
+        End Try
+
+    End Sub
 End Class
