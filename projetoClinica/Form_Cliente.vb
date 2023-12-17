@@ -6,8 +6,7 @@
 
     Dim cliente As New Cliente
 
-    'Armazena cadastro=1 ou alteração=2
-    Dim salvar As Integer = 0
+
 
     Public Sub Habilitar()
 
@@ -25,7 +24,7 @@
     End Sub
 
     Private Sub btnNovo_Click(sender As Object, e As EventArgs) Handles btnNovo.Click
-        salvar = 1
+        con.salvar = 1
 
         Habilitar()
         txtNome.Focus()
@@ -122,7 +121,7 @@
 
 
         'Salvar novo
-        If salvar = 1 Then
+        If con.salvar = 1 Then
             Dim dt As Date = DateAndTime.Now
 
 
@@ -141,10 +140,10 @@
             Limpar()
             Desabilitar()
 
-            salvar = 0
+            con.salvar = 0
 
             'Alterar existente
-        ElseIf salvar = 2 Then
+        ElseIf con.salvar = 2 Then
 
         End If
 

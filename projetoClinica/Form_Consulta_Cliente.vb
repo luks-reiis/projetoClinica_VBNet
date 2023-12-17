@@ -61,4 +61,53 @@
         End Try
 
     End Sub
+
+    Private Sub dgvClientes_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvClientes.CellContentClick
+
+    End Sub
+
+    Private Sub dgvClientes_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvClientes.CellDoubleClick
+
+        Try
+
+            Form_Cliente.txtCodigo.Text = dgvClientes.CurrentRow.Cells(0).Value
+            Form_Cliente.txtNome.Text = dgvClientes.CurrentRow.Cells(1).Value
+            Form_Cliente.txtRg.Text = dgvClientes.CurrentRow.Cells(2).Value
+            Form_Cliente.txtNascimento.Text = dgvClientes.CurrentRow.Cells(3).Value
+            Form_Cliente.txtCelular.Text = dgvClientes.CurrentRow.Cells(4).Value
+            Form_Cliente.txtIdade.Text = dgvClientes.CurrentRow.Cells(5).Value
+
+
+            con.salvar = 2
+
+            Form_Cliente.Habilitar()
+
+            Me.Close()
+
+        Catch ex As Exception
+            MsgBox("Não foi possível selecionar o cliente! Detalhes do erro: " & ex.Message, MsgBoxStyle.Critical, "Erro")
+            Exit Sub
+        End Try
+
+    End Sub
+
+    Private Sub btnSair_Click(sender As Object, e As EventArgs) Handles btnSair.Click
+        Me.Close()
+    End Sub
+
+    Private Sub btnConfirmar_Click(sender As Object, e As EventArgs) Handles btnConfirmar.Click
+        Form_Cliente.txtCodigo.Text = dgvClientes.CurrentRow.Cells(0).Value
+        Form_Cliente.txtNome.Text = dgvClientes.CurrentRow.Cells(1).Value
+        Form_Cliente.txtRg.Text = dgvClientes.CurrentRow.Cells(2).Value
+        Form_Cliente.txtNascimento.Text = dgvClientes.CurrentRow.Cells(3).Value
+        Form_Cliente.txtCelular.Text = dgvClientes.CurrentRow.Cells(4).Value
+        Form_Cliente.txtIdade.Text = dgvClientes.CurrentRow.Cells(5).Value
+
+
+        con.salvar = 2
+
+        Form_Cliente.Habilitar()
+
+        Me.Close()
+    End Sub
 End Class

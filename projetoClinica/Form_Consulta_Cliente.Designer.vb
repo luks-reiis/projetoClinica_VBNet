@@ -27,8 +27,8 @@ Partial Class Form_Consulta_Cliente
         Me.txtNome = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.dgvClientes = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnConfirmar = New System.Windows.Forms.Button()
+        Me.btnSair = New System.Windows.Forms.Button()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.lblCliente = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
@@ -87,23 +87,23 @@ Partial Class Form_Consulta_Cliente
         Me.dgvClientes.Size = New System.Drawing.Size(753, 218)
         Me.dgvClientes.TabIndex = 0
         '
-        'Button1
+        'btnConfirmar
         '
-        Me.Button1.Location = New System.Drawing.Point(11, 347)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "Confirmar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnConfirmar.Location = New System.Drawing.Point(11, 347)
+        Me.btnConfirmar.Name = "btnConfirmar"
+        Me.btnConfirmar.Size = New System.Drawing.Size(75, 23)
+        Me.btnConfirmar.TabIndex = 3
+        Me.btnConfirmar.Text = "Confirmar"
+        Me.btnConfirmar.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnSair
         '
-        Me.Button2.Location = New System.Drawing.Point(92, 347)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "Sair"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnSair.Location = New System.Drawing.Point(92, 347)
+        Me.btnSair.Name = "btnSair"
+        Me.btnSair.Size = New System.Drawing.Size(75, 23)
+        Me.btnSair.TabIndex = 3
+        Me.btnSair.Text = "Sair"
+        Me.btnSair.UseVisualStyleBackColor = True
         '
         'StatusStrip1
         '
@@ -132,8 +132,8 @@ Partial Class Form_Consulta_Cliente
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(789, 414)
         Me.Controls.Add(Me.StatusStrip1)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnSair)
+        Me.Controls.Add(Me.btnConfirmar)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.MaximizeBox = False
@@ -156,8 +156,8 @@ Partial Class Form_Consulta_Cliente
     Friend WithEvents txtNome As TextBox
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents dgvClientes As DataGridView
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnConfirmar As Button
+    Friend WithEvents btnSair As Button
     Friend WithEvents StatusStrip1 As StatusStrip
     Friend WithEvents lblCliente As ToolStripStatusLabel
     Friend WithEvents ToolStripStatusLabel1 As ToolStripStatusLabel
